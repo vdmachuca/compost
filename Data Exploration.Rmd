@@ -1,0 +1,11 @@
+---
+title: "Data Exploration"
+author: "Vanessa Machuca"
+date: "4/28/2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
