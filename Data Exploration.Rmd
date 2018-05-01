@@ -5,7 +5,24 @@ date: "4/28/2018"
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(tidyr)
+library(readr)
+library(ggplot2)
+library(loopr)
+```
+
+I will know graph gas emissions over time, to get a sense of any patterns that may be present.
+
+```{r}
+compost_GHG <- read_csv("~/Desktop/MATH183_Modeling/Project/compost/compost-GHG.csv")
+```
+
+I am interested in O2 and NH3 levels in particular. 
+
+```{r}
+ggplot(compost_GHG,aes(x='Julian Day',y="Chamber Number"))+geom_point()
 ```
 
