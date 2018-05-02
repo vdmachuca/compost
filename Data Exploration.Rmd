@@ -23,6 +23,15 @@ compost_GHG <- read_csv("~/Desktop/MATH183_Modeling/Project/compost/compost-GHG.
 I am interested in O2 and NH3 levels in particular. 
 
 ```{r}
-ggplot(compost_GHG,aes(x='Julian Day',y="Chamber Number"))+geom_point()
+ggplot(compost_GHG,aes(x=`Julian Day`,colour=`Chamber Number`))+geom_point(aes(y=`Mean NH3 (ppm)`))
+
+ggplot(compost_GHG,aes(x=`Julian Day`,colour=`Chamber Number`))+ geom_point(aes(y=`Mean N2O (ppm)`))
+
+ggplot(compost_GHG,aes(x=`Julian Day`,colour=`Chamber Number`))+ geom_point(aes(y=`Mean H2O (ppm)`))
+
+ggplot(compost_GHG,aes(x=`Julian Day`,colour=`Chamber Number`))+ geom_point(aes(y=`Cav. Temperature (K)`))
+
+ggplot(compost_GHG,aes(x=`Julian Day`,colour=`Chamber Number`))+ geom_point(aes(y=`Chamber Temperature (K)`))
+
 ```
 
